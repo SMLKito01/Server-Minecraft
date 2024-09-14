@@ -1,0 +1,1 @@
+java -Xmx16G -Xms14G -XX:+UseG1GC -XX:MaxGCPauseMillis=50 -XX:+ParallelRefProcEnabled -XX:+UnlockExperimentalVMOptions -XX:G1NewSizePercent=20 -XX:G1MaxNewSizePercent=60 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=15 -XX:InitiatingHeapOccupancyPercent=20 -XX:+AlwaysPreTouch -XX:+UseStringDeduplication -Dfile.encoding=UTF-8 -jar paper.jar nogui

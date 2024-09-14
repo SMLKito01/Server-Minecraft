@@ -1,0 +1,185 @@
+# This is the main configuration file for Spigot.
+# As you can see, there's tons to configure. Some options may impact gameplay, so use
+# with caution, and make sure you know what each option does before configuring.
+# For a reference for any variable inside this file, check out the Spigot wiki at
+# http://www.spigotmc.org/wiki/spigot-configuration/
+#
+# If you need help with the configuration or have any questions related to Spigot,
+# join us at the Discord or drop by our forums and leave a post.
+#
+# Discord: https://www.spigotmc.org/go/discord
+# Forums: http://www.spigotmc.org/
+
+settings:
+  debug: false
+  timeout-time: 60
+  restart-on-crash: true
+  restart-script: ./start.sh
+  save-user-cache-on-stop-only: true
+  sample-count: 12
+  bungeecord: false
+  player-shuffle: 0
+  user-cache-size: 1000
+  moved-wrongly-threshold: 0.0625
+  moved-too-quickly-multiplier: 10.0
+  netty-threads: 4 # Tùy chỉnh theo CPU
+  attribute:
+    maxHealth:
+      max: 2048.0
+    movementSpeed:
+      max: 2048.0
+    attackDamage:
+      max: 2048.0
+  log-villager-deaths: false
+  log-named-deaths: false
+
+messages:
+  whitelist: You are not whitelisted on this server!
+  unknown-command: Unknown command. Type "/help" for help.
+  server-full: The server is full!
+  outdated-client: Outdated client! Please use {0}
+  outdated-server: Outdated server! I'm still on {0}
+  restart: Server is restarting
+
+advancements:
+  disable-saving: false
+  disabled:
+  - minecraft:story/disabled
+
+world-settings:
+  default:
+    below-zero-generation-in-existing-chunks: true
+    merge-radius:
+      item: 2.5
+      exp: 3.0
+    view-distance: 10 # Giảm từ default
+    simulation-distance: 8 # Giảm để tối ưu hóa hoạt động của các thực thể
+    mob-spawn-range: 7 # Giảm từ 8 xuống 7
+    item-despawn-rate: 12000 # Tăng từ 6000
+    arrow-despawn-rate: 2400 # Tăng từ 1200
+    trident-despawn-rate: 2400 # Tăng từ 1200
+    zombie-aggressive-towards-villager: true
+    nerf-spawner-mobs: true # Bật để giảm tải
+    enable-zombie-pigmen-portal-spawns: false # Tắt nếu không cần
+    wither-spawn-sound-radius: 0
+    end-portal-sound-radius: 0
+    hanging-tick-frequency: 300 # Tăng từ 100
+    thunder-chance: 50000 # Giảm từ 100000
+    growth:
+      cactus-modifier: 200
+      cane-modifier: 200
+      melon-modifier: 200
+      mushroom-modifier: 200
+      pumpkin-modifier: 200
+      sapling-modifier: 200
+      beetroot-modifier: 200
+      carrot-modifier: 200
+      potato-modifier: 200
+      torchflower-modifier: 200
+      wheat-modifier: 200
+      netherwart-modifier: 200
+      vine-modifier: 200
+      cocoa-modifier: 200
+      bamboo-modifier: 200
+      sweetberry-modifier: 200
+      kelp-modifier: 200
+      twistingvines-modifier: 200
+      weepingvines-modifier: 200
+      cavevines-modifier: 200
+      glowberry-modifier: 200
+      pitcherplant-modifier: 200
+    entity-activation-range:
+      animals: 24
+      monsters: 24
+      raiders: 36
+      misc: 12
+      water: 12
+      villagers: 24
+      flying-monsters: 24
+      wake-up-inactive:
+        animals-max-per-tick: 2
+        animals-every: 1800
+        animals-for: 100
+        monsters-max-per-tick: 4
+        monsters-every: 600
+        monsters-for: 100
+        villagers-max-per-tick: 2
+        villagers-every: 900
+        villagers-for: 100
+        flying-monsters-max-per-tick: 4
+        flying-monsters-every: 300
+        flying-monsters-for: 100
+      villagers-work-immunity-after: 200
+      villagers-work-immunity-for: 40
+      villagers-active-for-panic: true
+      tick-inactive-villagers: true
+      ignore-spectators: true
+    entity-tracking-range:
+      players: 32
+      animals: 32
+      monsters: 32
+      misc: 24
+      display: 96
+      other: 48
+    ticks-per:
+      hopper-transfer: 8
+      hopper-check: 2
+    hopper-amount: 1
+    hopper-can-load-chunks: false
+    dragon-death-sound-radius: 0
+    seed-village: 10387312
+    seed-desert: 14357617
+    seed-igloo: 14357618
+    seed-jungle: 14357619
+    seed-swamp: 14357620
+    seed-monument: 10387313
+    seed-shipwreck: 165745295
+    seed-ocean: 14357621
+    seed-outpost: 165745296
+    seed-endcity: 10387313
+    seed-slime: 987234911
+    seed-nether: 30084232
+    seed-mansion: 10387319
+    seed-fossil: 14357921
+    seed-portal: 34222645
+    seed-ancientcity: 20083232
+    seed-trailruins: 83469867
+    seed-trialchambers: 94251327
+    seed-buriedtreasure: 10387320
+    seed-mineshaft: default
+    seed-stronghold: default
+    hunger:
+      jump-walk-exhaustion: 0.05
+      jump-sprint-exhaustion: 0.2
+      combat-exhaustion: 0.1
+      regen-exhaustion: 6.0
+      swim-multiplier: 0.01
+      sprint-multiplier: 0.1
+      other-multiplier: 0.0
+    max-tnt-per-tick: 50 # Giảm từ 100
+    max-tick-time:
+      tile: 50
+      entity: 50
+    verbose: false
+
+commands:
+  spam-exclusions:
+  - /skill
+  silent-commandblock-console: true # Bật để giảm log
+  replace-commands:
+  - setblock
+  - summon
+  - testforblock
+  - tellraw
+  log: true
+  tab-complete: 20 # Tăng giá trị để giảm tải
+  send-namespaced: true
+
+players:
+  disable-saving: false
+
+config-version: 12
+
+stats:
+  disable-saving: false
+  forced-stats: {}
